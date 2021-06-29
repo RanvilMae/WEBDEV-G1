@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!-- Custom CSS -->
+  <link type="text/css" rel="stylesheet" href="css/main.css" />
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GROUP 1</title>
+  <style type="text/css">
+    body{
+    background-image: url("img/triangle.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        font-size: 15px;
+        background-color: #007acc;
+        color: white;
+        text-align: center;
+        height: 7rem;
+        margin-top:1rem;
+    }
+  </style>
+
+
+</head>
+<body>
+  <!-- Navigation bar -->
+<nav class="blue lighten-1-2">
+  <div class="container">
+    <div class="nav-wrapper">
+      <a href="index.html" class="brand-logo"><strong>ODMS</strong></a>
+      <a href="#" data-target="slide-out" class="button-collapse show-on-large right sidenav-trigger">
+        <i class="material-icons">menu</i>
+      </a>
+      <ul class="right hide-on-med-and-down">
+        <li >
+          <a href="home.html">HOME</a>
+        </li>
+        <li class="active">
+          <a href="dashboard.html">DASHBOARD</a>
+        </li>
+        <li>
+          <a href="upload.php">UPLOAD</a>
+        </li>
+        <li>
+          <a href="view.html">VIEW</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- Side nav -->
+<ul id="slide-out" class="sidenav">
+    <li>
+    <div class="user-view">
+      <div class="background">
+        <img src="img/blue.jpg" alt="">
+      </div>
+      <a href="#">
+        <img src="img/ken.jpg" alt="" class="circle">
+      </a>
+      <a href="#">
+        <span class="name white-text">Kenneth Harris</span>
+      </a>
+      <a href="#">
+        <span class="email white-text">kenharris@gmail.com</span>
+      </a>
+    </div>
+  </li>
+    <li>
+      <a href="home.html">Home
+        <i class="material-icons">home</i>
+      </a>
+    </li>
+    <li>
+      <a href="posts.html">Dashboard
+        <i class="material-icons">dashboard</i>
+      </a>
+    </li>
+    <li>
+      <a href="upoad.php">Upload
+        <i class="material-icons">upload</i>
+      </a>
+    </li>
+    <li>
+      <a href="view.html">View
+        <i class="material-icons">visibility</i>
+      </a>
+    </li>
+    <li>
+      <div class="divider"></div>
+    </li>
+    <li>
+      <a class="subheader">Account Controls</a>
+    </li>
+     <li>
+        <!-- Modal Trigger -->
+        <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Logout
+          <i class="material-icons">logout</i>
+        </a>
+    </li>
+</ul>
+
+
+          <!-- Modal Structure -->
+          <div id="modal1" class="modal">
+            <div class="modal-content">
+              <h4>LOG OUT</h4>
+              <p><strong style="color:RED">Kenneth Harris</strong> are you sure you want to Log out?</p>
+            </div>
+            <div class="modal-footer">
+              <a href="index.html" class="modal-close waves-effect waves-green btn">Agree</a>
+            </div>
+          </div>
+
+<!-- Section: Stats -->
+  <section class="section section-stats center">
+    <div class="row">
+      <div class="col s12 m6 l3">
+        <div class="card-panel blue lighten-1 white-text center">
+          <i class="material-icons medium">cloud_upload
+          </i>
+          <h5>UPLOADED FILES</h5>
+          <h3 class="count">1300</h3>
+          <div class="progress grey lighten-1">
+            <div class="determinate white" style="width: 40%;"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m6 l3">
+        <div class="card-panel center">
+          <i class="material-icons medium">archive</i>
+          <h5>ARCHIVED FILES</h5>
+          <h3 class="count">105</h3>
+          <div class="progress grey lighten-1">
+            <div class="determinate blue" style="width: 20%;"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m6 l3">
+        <div class="card-panel blue lighten-1 white-text center">
+          <i class="material-icons medium">admin_panel_settings</i>
+          <h5>NUMBER OF ADMINS</h5>
+          <h3 class="count">12</h3>
+          <div class="progress grey lighten-1">
+            <div class="determinate white" style="width: 40%;"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m6 l3">
+        <div class="card-panel center">
+          <i class="material-icons medium">person</i>
+          <h5>NUMBER OF USERS</h5>
+          <h3 class="count">450</h3>
+          <div class="progress grey lighten-1">
+            <div class="determinate blue" style="width: 10%;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    
+
+   <!-- Footer -->
+  <footer class="section blue lighten-1 white-text center footer">
+    <p>WEB DEVELOPMENT BATCH 2<br>
+    GROUP 1 &copy; 2021</p><br>
+  </footer>
+
+
+ <!-- Loader -->
+  <div class="preloader-wrapper big active loader">
+    <div class="spinner-layer spinner-blue-only">
+      <div class="circle-clipper left">
+        <div class="circle"></div>
+      </div><div class="gap-patch">
+        <div class="circle"></div>
+      </div><div class="circle-clipper right">
+        <div class="circle"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fixed ACtion Button -->
+  <div class="fixed-action-btn">
+    <a class="btn-floating btn-large">
+      <i class="material-icons black">add</i>
+    </a>
+    <ul>
+      <li>
+        <a href="#post-modal" class="btn-floating green modal-trigger white">
+          <i class="material-icons black">mode_edit</i>
+        </a>
+      </li>
+      <li>
+        <a href="#category-modal" class="modal-trigger btn-floating white">
+          <i class="material-icons black">folder</i></a>
+      </li>
+      <li>
+        <a href="#users-modal" class="modal-trigger btn-floating white">
+          <i class="material-icons black">supervisor_account</i></a>
+      </li>
+    </ul>
+  </div>
+
+  
+ <!-- Jquery CDN -->
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <!-- Canvas.js CDN -->
+  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+  <!-- ckEditor -->
+  <script src="https://cdn.ckeditor.com/4.16.1/standard/ckeditor.js"></script>
+  <!-- Chart JS -->
+  <script src="js/chart.js"></script>
+     
+  <script>
+    $('.section').hide();
+    setTimeout(function() {
+      $(document).ready(function(){
+        // Show Section
+        $('.section').fadeIn();
+        // Hide preLoader
+        $('.loader').fadeOut();
+        // Comments - Approve & Deny
+        $('.approve').click(function(e) {
+          M.toast({html: 'Approved'});
+          e.preventDefault();
+        });
+        $('.deny').click(function(e) {
+          M.toast({html: 'Denied'});
+          e.preventDefault();
+        });
+        // Fixed action Btn 
+        $('.fixed-action-btn').floatingActionButton();
+        // Modal
+        $('.modal').modal();
+        // ckEditor
+        CKEDITOR.replace('body');
+        // Select init
+        $('select').formSelect();
+        // Sidenav
+        $('.sidenav').sidenav();
+        // Counter
+        $('.count').each(function() {
+        // console.log($(this));
+        $(this).prop('Counter', 0).animate({
+          Counter: $(this).text()
+          }, {
+            duration: 10000,
+            easing: 'swing',
+            step: function(now) {
+            $(this).text(Math.ceil(now));
+            }
+          });
+        });
+        // Quick Todos
+        $('#todo-form').submit(function(e) {
+         console.log($('#todo').val());
+         const output = `
+             <li class="collection-item">
+                <div>${$('#todo').val()}
+                  <a href="#" class="secondary-content delete">
+                    <i class="material-icons">close</i>
+                  </a>
+                </div>
+              </li>
+           `;
+          $('.todos').append(output);
+          M.toast({html: 'Todo Added'});
+          e.preventDefault();
+        });
+        // Delete Todos
+        $('.todos').on('click', '.delete', function(e) {
+         console.log($(this).parent().parent());
+         $(this).parent().parent().remove();
+         M.toast({html: 'Todo Removed'});
+          e.preventDefault();
+        });
+      });
+      }, 1000);
+    
+window.onload = function () {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+  exportEnabled: true,
+  animationEnabled: true,
+  title:{
+    text: "Uploaded Documents Status"
+  },
+  legend:{
+    cursor: "pointer",
+    itemclick: explodePie
+  },
+  data: [{
+    type: "pie",
+    showInLegend: true,
+    toolTipContent: "{name}: <strong>{y}%</strong>",
+    indexLabel: "{name} - {y}%",
+    dataPoints: [
+      { y: 26, name: "Completed", exploded: true },
+      { y: 20, name: "For Review" },
+      { y: 5, name: "On Going" },
+      { y: 3, name: "Pending" },
+      { y: 7, name: "Signed" }
+    ]
+  }]
+});
+chart.render();
+}
+
+function explodePie (e) {
+  if(typeof (e.dataSeries.dataPoints[e.dataPointIndex].exploded) === "undefined" || !e.dataSeries.dataPoints[e.dataPointIndex].exploded) {
+    e.dataSeries.dataPoints[e.dataPointIndex].exploded = true;
+  } else {
+    e.dataSeries.dataPoints[e.dataPointIndex].exploded = false;
+  }
+  e.chart.render();
+
+}
+</script>
+</body>
+</html>
+
+
